@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class CollisionHandler : MonoBehaviour
       case "Fuel":
           Debug.Log("you have fueled up");
           break;
-      case "Default":
+      default:
+          {
+            SceneManager.LoadScene(0);
+          }
           Debug.Log("you blew up");
           break;
 
