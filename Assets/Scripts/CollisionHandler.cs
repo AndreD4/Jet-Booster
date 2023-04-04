@@ -19,12 +19,16 @@ public class CollisionHandler : MonoBehaviour
           Debug.Log("you have fueled up");
           break;
       default:
-          {
-            SceneManager.LoadScene(0);
-          }
+          ReLoadLevel();
           Debug.Log("you blew up");
           break;
 
-    }
+    } 
+  }
+
+  void ReLoadLevel()
+  {
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    SceneManager.LoadScene(currentSceneIndex);
   }
 }
