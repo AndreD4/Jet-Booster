@@ -17,6 +17,9 @@ public class CollisionHandler : MonoBehaviour
       case "Fuel":
           Debug.Log("you have fueled up");
           break;
+      case "Default":
+          Debug.Log("you blew up");
+          break;
 
     }
   }
