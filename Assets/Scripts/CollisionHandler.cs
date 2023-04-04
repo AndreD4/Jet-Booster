@@ -19,9 +19,15 @@ public class CollisionHandler : MonoBehaviour
           Debug.Log("you have fueled up");
           break;
       default:
-          ReLoadLevel();
+         StartCrashSequence();
           break;
     } 
+  }
+
+  void StartCrashSequence()
+  {
+    GetComponent<Movement>().enabled = false;
+    Invoke("ReLoadLevel", 1f);
   }
 
   void LoadNextLevel()
