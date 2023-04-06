@@ -7,7 +7,7 @@ public class QuitApp : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKey(KeyCode.Escape))
         {
           Debug.Log("YOU HAVE ESCAPED");
           Application.Quit();
